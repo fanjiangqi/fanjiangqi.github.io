@@ -573,6 +573,66 @@
           
             <h2 id="剑指offer题目"><a href="#剑指offer题目" class="headerlink" title="剑指offer题目"></a>剑指offer题目</h2><h2 id="gt-记录是为了更好的回顾，没有回顾的记录，等于没有记录。"><a href="#gt-记录是为了更好的回顾，没有回顾的记录，等于没有记录。" class="headerlink" title="&gt; 记录是为了更好的回顾，没有回顾的记录，等于没有记录。"></a>&gt; 记录是为了更好的回顾，没有回顾的记录，等于没有记录。</h2><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
 <li><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/Singleton1.java" target="_blank" rel="external">面试题2：实现Singleton模式</a></li>
+<li><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/Power.java" target="_blank" rel="external">面试题11：数值的整数次方</a>，需要分指数正负和0的情况讨论，以及主要浮点数相等的判断，不能直接使用 == 来判断</li>
+<li><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/Test12.java" target="_blank" rel="external">面试题12：打印1到最大的n位数</a><ul>
+<li>大数问题，<strong>用char[] 解决</strong>，思路很指定借鉴</li>
+<li>char 类型的 ascii码，和 两个方法int Character.digit(char ch, int radix), char Character.forDigit(int digit, int radix) </li>
+</ul>
+</li>
+<li><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/Test13.java" target="_blank" rel="external">面试题12：在O(1)时间内删除链表结点</a><ul>
+<li>把要删除的下一个结点复制到删除节点上，删除下一个节点。从而实现O(1)复杂度</li>
+<li>此方法只能删除非尾节点，尾节点还需要通过遍历的方法，找到尾节点的前一个结点</li>
+</ul>
+</li>
+<li><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/Test16.java" target="_blank" rel="external">面试题16：反转链表</a><ul>
+<li><strong>很基础，很基础，需要记住</strong></li>
+</ul>
+</li>
+<li><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/Test17.java" target="_blank" rel="external">面试题17：合并两个排序的链表</a><ul>
+<li><strong>递归解决，不然会很复杂</strong></li>
+</ul>
+</li>
+<li><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/Test18.java" target="_blank" rel="external">面试题18：树的子结构</a><ul>
+<li>前序变量和递归的使用，<em>第一次没做出来</em></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="第四章-解决面试题的思路"><a href="#第四章-解决面试题的思路" class="headerlink" title="第四章 解决面试题的思路"></a>第四章 解决面试题的思路</h3><ul>
+<li><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/Test18.java" target="_blank" rel="external">面试题19：二叉树的镜像</a><ul>
+<li>递归解决，要细心</li>
+</ul>
+</li>
+<li><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/Test24.java" target="_blank" rel="external">面试题24：二叉树的后序遍历序列</a><ul>
+<li>递归，递归中止条件</li>
+</ul>
+</li>
+<li><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/Test28.java" target="_blank" rel="external">面试题28：字符串的排列</a>,2017.6.22<ul>
+<li>permutation 问题， 回溯法</li>
+</ul>
+</li>
+<li><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/Test30.java" target="_blank" rel="external">面试题30: 最小的K个数</a>,2017.6.23<ul>
+<li><strong>很经典的问题</strong> 2中方法解决</li>
+</ul>
+</li>
+<li><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/Test30.java" target="_blank" rel="external">面试题31：连续子数组的最大和</a>,2017.6.23<ul>
+<li><strong>dp[i]定义为，以第 i 个元素结尾的连续子数组的最大和</strong></li>
+</ul>
+</li>
+<li><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/Test34.java" target="_blank" rel="external">面试题34：丑数</a>,2017.6.28</li>
+<li><p><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/Test35.java" target="_blank" rel="external">面试题35：第一个出现一次的字符</a>,2017.6.28</p>
+<hr>
+<h2 id="编程之美"><a href="#编程之美" class="headerlink" title="编程之美"></a>编程之美</h2></li>
+<li><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/beautyOfProgramming/Chapter3_1.java" target="_blank" rel="external">题目3.1：字符串移位包含问题</a><ul>
+<li>2中方法： 1. 暴力搜索，一次移位一个然后判断，其实暴力搜索有时也不是那么容易想到 2. s的位移后所有字符串都是 ss（组合）字符串的子字符串</li>
+<li>主要是java strStr方法的编写</li>
+</ul>
+</li>
+<li><a href="https://github.com/fanjiangqi/AlgorithmOffer/blob/master/src/main/java/beautyOfProgramming/BinaryTreeMaxDistance.java" target="_blank" rel="external">题目3.8：求二叉树中节点的最大距离</a><ul>
+<li>分治法，构建返回结果的数据结构</li>
+<li>很好的一题，多看看，思考，<a href="http://www.cnblogs.com/miloyip/archive/2010/02/25/binary_tree_distance.html" target="_blank" rel="external">参考资料</a></li>
+</ul>
+</li>
 </ul>
 
           
