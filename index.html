@@ -202,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -212,7 +212,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -255,6 +255,141 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/28/Session和Cookie--面试专用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiangqi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jiangqi's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/28/Session和Cookie--面试专用/" itemprop="url">Session和Cookie--面试专用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-28T15:39:29+08:00">
+                2017-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>面试中经常会问道，session和cookie的区别，通常心里都有一个答案，但如何回答的让面试官满意，还是需要好好斟酌。所以，记录下来我的思考，以后面试直接拿来主义。</p>
+</blockquote>
+<ol>
+<li>首先最重要的点，<strong>cookie和session都是用来跟踪会话的机制。cookie是为了弥补HTTP协议无状态的不足而产生的</strong>。</li>
+<li>cookie是存储在客户端浏览器中的，session是存储在服务器端的。</li>
+<li>cookie是不可跨域的（有setDomain()和setPath()属性）</li>
+<li>session通过名为JSESSIONID的cookie来作为标识</li>
+</ol>
+<h3 id="跨域访问"><a href="#跨域访问" class="headerlink" title="跨域访问"></a>跨域访问</h3><blockquote>
+<p>面试中经常会问到，不同域名如何实现跨域共享。<br>例如：a.google.com 和b.google.com 如何共享登录信息（单点登录）</p>
+</blockquote>
+<p>主要通过cookie的setDomain(“*.google.com”)属性来实现。</p>
+<blockquote>
+<p>再深一点，通过上面方式实现跨域共享cookie，但是一级域名和二级域名不能实现session共享，如何解决？</p>
+</blockquote>
+<p>思路：</p>
+<ol>
+<li>登录一级域名时，会保存一个JSESSIONID到cookie中</li>
+<li>访问二级域名时，由会重新生成一个JSESSIONID到cookie中<br>解决方法：</li>
+<li>把第一次登录的生成的JSESSIONID存储到一个共享域的cookie中</li>
+<li>访问二级域名时，把JSESSIONID设置为一级域名的JSESSIONID值，即存储在共享cookie中的值</li>
+</ol>
+<p>这样就实现了，一级域名和二级域名下共享一个session。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/18/HTTPS原理简单理解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -284,7 +419,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-18T22:24:41+08:00">
                 2017-08-18
@@ -415,7 +550,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-18T22:24:41+08:00">
                 2017-08-18
@@ -532,7 +667,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-18T22:24:41+08:00">
                 2017-08-18
@@ -713,8 +848,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -727,7 +862,7 @@
             <div class="site-state-item site-state-tags">
               
                 <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-name">tags</span>
               
             </div>
           
@@ -777,7 +912,7 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
