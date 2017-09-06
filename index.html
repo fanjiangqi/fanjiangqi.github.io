@@ -255,6 +255,125 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/06/IOCandAOP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiangqi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jiangqi's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/06/IOCandAOP/" itemprop="url">IOC和AOP的面试问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-06T22:29:28+08:00">
+                2017-09-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>面试中经常会被问道：<strong>如何理解ioc和aop.</strong> 网上看了一圈，也没发现有什么好的回答，所以自己决定来大胆的回答下。<br>我从3个角度来回答，是什么？为什么用？如何实现？这样方便记忆，容易在大脑中形成组块。</p>
+<h3 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h3><p><strong>ioc是什么</strong><br>IOC控制反转，是一种可以帮助我们解耦各业务对象间依赖关系的对象绑定方式【来自《spring揭秘》】。<br>区别与ioc容器，ioc容器主要负责1. 业务对象的构建管理 2.业务对象的依赖绑定。spring 中 BeanFactory 和ApplicationContext就是2个重要的ioc容器。<br><strong>为什么要用ioc</strong><br>为了解除对象之间的强耦合关系，把原来对象之间的耦合关系通过ioc容器注入的方式来实现<br><strong>如何实现ioc</strong></p>
+<ol>
+<li>通过解析xml或者注解，获取bean定义</li>
+<li>实例化bean</li>
+<li>通过反射注入需要的对象中</li>
+</ol>
+<h3 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3><p><strong>aop是什么</strong><br>aop面向切面编程，是对面向对象编程的补充，主要应用域具有横切性质的系统级任务，如安全，log，事务管理等地方。<br><strong>为什么需要aop</strong><br>作为面向对象编程的补充，aop主要解决软件系统中oop难解决的问题，比如在开发中需要对整个系统一些方法，加入权限控制，普通oop没每个方法出修改源码，aop则可以在不干扰原方法的情况下，通过切点织入其中，特别在后期如果对权限再需要修改时，aop只需修改一出。<br><strong>如何实现aop</strong><br>aop分为静态aop和动态aop，静态aop以AspectJ为代表，通过特定编译器把实现后的aspect编译并织入系统的字节码中。动态aop通常使用java动态代理来实现。spring aop通过java 动态代理机制实现，由于动态代理是面向接口的，在动态代理无法实现时，通过CGLIB库的动态字节码增强来实现。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/05/url process/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1103,7 +1222,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

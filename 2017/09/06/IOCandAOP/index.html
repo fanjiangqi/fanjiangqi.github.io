@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="芒格, 读书笔记" />
+  <meta name="keywords" content="spring, ioc, aop" />
 
 
 
@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="最近在读《穷查理宝典》发现很多知识是我知道的，听过的，但是却没有实际或者没有记录在脑子形成框架的，所以有时读书不在于多，而在与和以前知识的联系和实践。所以决定写下读书笔记，加深印象，形成框架。  这篇短短的笔记，主要针对的是其中芒格在哈佛学校毕业典礼上的演讲，这篇演讲相比于其他演讲理解起来更简单一点，主要讲逆向思维，如何避免人生中的痛苦。首先，读了这篇演讲词最重要的是要在大脑中形成一个框架，逆向">
-<meta name="keywords" content="芒格, 读书笔记">
+<meta name="description" content="面试中经常会被问道：如何理解ioc和aop. 网上看了一圈，也没发现有什么好的回答，所以自己决定来大胆的回答下。我从3个角度来回答，是什么？为什么用？如何实现？这样方便记忆，容易在大脑中形成组块。 IOCioc是什么IOC控制反转，是一种可以帮助我们解耦各业务对象间依赖关系的对象绑定方式【来自《spring揭秘》】。区别与ioc容器，ioc容器主要负责1. 业务对象的构建管理 2.业务对象的依赖绑">
+<meta name="keywords" content="spring, ioc, aop">
 <meta property="og:type" content="article">
-<meta property="og:title" content="查理-芒格 在哈佛学校毕业典礼上的演讲-笔记">
-<meta property="og:url" content="http://yoursite.com/2017/09/01/查理-芒格 在哈佛学校毕业典礼上的演讲-笔记/index.html">
+<meta property="og:title" content="IOC和AOP的面试问题">
+<meta property="og:url" content="http://yoursite.com/2017/09/06/IOCandAOP/index.html">
 <meta property="og:site_name" content="Jiangqi&#39;s Blog">
-<meta property="og:description" content="最近在读《穷查理宝典》发现很多知识是我知道的，听过的，但是却没有实际或者没有记录在脑子形成框架的，所以有时读书不在于多，而在与和以前知识的联系和实践。所以决定写下读书笔记，加深印象，形成框架。  这篇短短的笔记，主要针对的是其中芒格在哈佛学校毕业典礼上的演讲，这篇演讲相比于其他演讲理解起来更简单一点，主要讲逆向思维，如何避免人生中的痛苦。首先，读了这篇演讲词最重要的是要在大脑中形成一个框架，逆向">
+<meta property="og:description" content="面试中经常会被问道：如何理解ioc和aop. 网上看了一圈，也没发现有什么好的回答，所以自己决定来大胆的回答下。我从3个角度来回答，是什么？为什么用？如何实现？这样方便记忆，容易在大脑中形成组块。 IOCioc是什么IOC控制反转，是一种可以帮助我们解耦各业务对象间依赖关系的对象绑定方式【来自《spring揭秘》】。区别与ioc容器，ioc容器主要负责1. 业务对象的构建管理 2.业务对象的依赖绑">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-01T14:22:36.763Z">
+<meta property="og:updated_time" content="2017-09-06T14:29:28.635Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="查理-芒格 在哈佛学校毕业典礼上的演讲-笔记">
-<meta name="twitter:description" content="最近在读《穷查理宝典》发现很多知识是我知道的，听过的，但是却没有实际或者没有记录在脑子形成框架的，所以有时读书不在于多，而在与和以前知识的联系和实践。所以决定写下读书笔记，加深印象，形成框架。  这篇短短的笔记，主要针对的是其中芒格在哈佛学校毕业典礼上的演讲，这篇演讲相比于其他演讲理解起来更简单一点，主要讲逆向思维，如何避免人生中的痛苦。首先，读了这篇演讲词最重要的是要在大脑中形成一个框架，逆向">
+<meta name="twitter:title" content="IOC和AOP的面试问题">
+<meta name="twitter:description" content="面试中经常会被问道：如何理解ioc和aop. 网上看了一圈，也没发现有什么好的回答，所以自己决定来大胆的回答下。我从3个角度来回答，是什么？为什么用？如何实现？这样方便记忆，容易在大脑中形成组块。 IOCioc是什么IOC控制反转，是一种可以帮助我们解耦各业务对象间依赖关系的对象绑定方式【来自《spring揭秘》】。区别与ioc容器，ioc容器主要负责1. 业务对象的构建管理 2.业务对象的依赖绑">
 
 
 
@@ -132,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/01/查理-芒格 在哈佛学校毕业典礼上的演讲-笔记/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/06/IOCandAOP/"/>
 
 
 
 
 
-  <title>查理-芒格 在哈佛学校毕业典礼上的演讲-笔记 | Jiangqi's Blog</title>
+  <title>IOC和AOP的面试问题 | Jiangqi's Blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -258,7 +258,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/01/查理-芒格 在哈佛学校毕业典礼上的演讲-笔记/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/06/IOCandAOP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jiangqi">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">查理-芒格 在哈佛学校毕业典礼上的演讲-笔记</h1>
+          <h1 class="post-title" itemprop="name headline">IOC和AOP的面试问题</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-01T22:22:36+08:00">
-                2017-09-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-06T22:29:28+08:00">
+                2017-09-06
               </time>
             
 
@@ -322,23 +322,14 @@
       
 
       
-        <blockquote>
-<p>最近在读《穷查理宝典》发现很多知识是我知道的，听过的，但是却没有实际或者没有记录在脑子形成框架的，所以有时读书不在于多，而在与和以前知识的联系和实践。<br>所以决定写下读书笔记，加深印象，形成框架。</p>
-</blockquote>
-<p>这篇短短的笔记，主要针对的是其中芒格在哈佛学校毕业典礼上的演讲，这篇演讲相比于其他演讲理解起来更简单一点，主要讲逆向思维，如何避免人生中的痛苦。<br>首先，读了这篇演讲词最重要的是要在大脑中形成一个框架，<strong>逆向思维，本来需要得到X，我们发现X不好从正面得到，所以我们逆向思考，如何得到非X，然后避免非X，从而就可以得到X。</strong> 原话是：<strong>要解出X，得先研究如何才能得到非X。</strong><br>当然这个逆向思维的演讲方式并不是芒格自创的，他是学习卡森的演讲，卡森说他无法告诉毕业的同学如何才能得到幸福，但能够根据个人经验，告诉他们如何保证自己过上通过的生活。卡森给出的三个痛苦人生的处方是：</p>
-<ul>
-<li>为了改变心情或者感觉而使用化学物质</li>
-<li>妒忌</li>
-<li>怨恨<br>卡森说他一次又一次尝试这些东西，结果每次都变得痛苦。芒格在他的基础上开出了其他4个处方：</li>
-</ul>
+        <p>面试中经常会被问道：<strong>如何理解ioc和aop.</strong> 网上看了一圈，也没发现有什么好的回答，所以自己决定来大胆的回答下。<br>我从3个角度来回答，是什么？为什么用？如何实现？这样方便记忆，容易在大脑中形成组块。</p>
+<h3 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h3><p><strong>ioc是什么</strong><br>IOC控制反转，是一种可以帮助我们解耦各业务对象间依赖关系的对象绑定方式【来自《spring揭秘》】。<br>区别与ioc容器，ioc容器主要负责1. 业务对象的构建管理 2.业务对象的依赖绑定。spring 中 BeanFactory 和ApplicationContext就是2个重要的ioc容器。<br><strong>为什么要用ioc</strong><br>为了解除对象之间的强耦合关系，把原来对象之间的耦合关系通过ioc容器注入的方式来实现<br><strong>如何实现ioc</strong></p>
 <ol>
-<li><strong>要反复无常，不要虔诚地做你正在做的事。只要养成这个习惯，你们就能够绰绰有余地抵消所有优点共同产生的效应。</strong> 这个道理很容易理解，说的就是，做一件事没有耐心不坚持，遇到困难就放弃，总以为其他事情会更简单。如果养成这个习惯，那么这辈子注定成为一只平庸的乌龟。但如果不服用这个处方，就算开始某些条件不好，也能在后面的生活中抵消这些不足，芒格用具体例子解释了这点。</li>
-<li><strong>尽可能从你们自身的经验获取知识，尽量别从其他人成功或者失败的经验中广泛的吸取教训，不管他们是古人还是今人。这味药肯定能保证你们过上通过的生活，取得二流的成就。</strong> 个人感觉，这是牛人与平凡人差异的一个很重要的习惯，而且一般人是那么的不注意这个习惯。我希望自己把这个思维刻入大脑，多提醒自己，去学习他人知识，他们如何成功，如何失败。做到这点，最简单的方法就是，多读书，<strong>多读书，这也是成功人的最重要习惯之一</strong>， 反正我是没见过厉害的人读书很少的。牛顿说他的成功是因为站在巨人的肩上。</li>
-<li><strong>当你们在人生的战场上遭遇第一、第二或者第三次严重的失败，就请意志消沉，从此一蹶不振吧。</strong> 细心留意下身边的人，看看那些被失败打到的人的生活是什么样的吧。</li>
-<li>**忽视那个乡下人的故事，“要是知道我会死在哪里就好啦，那我将永远不去那个地方。”讲的是逆向思维，你能理解吗？我开始并不能，逃。</li>
+<li>通过解析xml或者注解，获取bean定义</li>
+<li>实例化bean</li>
+<li>通过反射注入需要的对象中</li>
 </ol>
-<hr>
-<p>ps：最近在知乎发现，著名心理学博士采铜，而且是再次研读。瞬间高大上</p>
+<h3 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3><p><strong>aop是什么</strong><br>aop面向切面编程，是对面向对象编程的补充，主要应用域具有横切性质的系统级任务，如安全，log，事务管理等地方。<br><strong>为什么需要aop</strong><br>作为面向对象编程的补充，aop主要解决软件系统中oop难解决的问题，比如在开发中需要对整个系统一些方法，加入权限控制，普通oop没每个方法出修改源码，aop则可以在不干扰原方法的情况下，通过切点织入其中，特别在后期如果对权限再需要修改时，aop只需修改一出。<br><strong>如何实现aop</strong><br>aop分为静态aop和动态aop，静态aop以AspectJ为代表，通过特定编译器把实现后的aspect编译并织入系统的字节码中。动态aop通常使用java动态代理来实现。spring aop通过java 动态代理机制实现，由于动态代理是面向接口的，在动态代理无法实现时，通过CGLIB库的动态字节码增强来实现。</p>
 
       
     </div>
@@ -368,9 +359,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/随笔/" rel="tag"># 随笔</a>
-          
-            <a href="/tags/读书/" rel="tag"># 读书</a>
+            <a href="/tags/面试/" rel="tag"># 面试</a>
           
         </div>
       
@@ -383,8 +372,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/28/Session和Cookie--面试专用/" rel="next" title="Session和Cookie--面试专用">
-                <i class="fa fa-chevron-left"></i> Session和Cookie--面试专用
+              <a href="/2017/09/05/url process/" rel="next" title="面试题： url请求整个过程">
+                <i class="fa fa-chevron-left"></i> 面试题： url请求整个过程
               </a>
             
           </div>
@@ -392,10 +381,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/05/url process/" rel="prev" title="面试题： url请求整个过程">
-                面试题： url请求整个过程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -442,8 +427,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -496,6 +490,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#IOC"><span class="nav-number">1.</span> <span class="nav-text">IOC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AOP"><span class="nav-number">2.</span> <span class="nav-text">AOP</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
