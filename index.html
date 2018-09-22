@@ -265,6 +265,137 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/22/CORS记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiangqi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jiangqi's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/22/CORS记录/" itemprop="url">第一次接触CORS</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-22T13:26:35+08:00">
+                2018-09-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/22/CORS记录/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/09/22/CORS记录/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="第一次接触CORS"><a href="#第一次接触CORS" class="headerlink" title="第一次接触CORS"></a>第一次接触CORS</h2><blockquote>
+<p>最近工作中第一次遇到跨域问题，以前听过但没有认真研究过，这次借助此机会，花了半天时间研究了下，终于理解了这个概念。</p>
+</blockquote>
+<p>CORS英文名Cross Origin Resource Share 跨域资源共享，是一种机制：允许客户端在访问A域名下页面时，A页面中部分的内容会请求B域下服务器得到，此时客户端一直处于A页面。Wikipedia解释：Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served.</p>
+<p>其实这是通过浏览器来保证的，当前访问的A服务的web页面有一个跨域请求到B服务，这时浏览器会进行这个跨域请求，请求时Request Header里面会带有一个字段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Origin:A服务器地址</div></pre></td></tr></table></figure></p>
+<p>如果B服务器允许A服务器跨域请求，会在响应的Response Header里带入字段：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Access-Control-Allow-Origin: A服务器地址(或者*)</div></pre></td></tr></table></figure></p>
+<p>这时浏览器就会把跨域的内容返回给A，但如果不允许，B将返回一个错误请求（具体怎么返回，还没研究），这样A页面将会报跨域错误。</p>
+<h3 id="简单请求问题"><a href="#简单请求问题" class="headerlink" title="简单请求问题"></a>简单请求问题</h3><p>上面说浏览器会请求跨域内容到B，这里会分不同情况，如果A页面跨域的请求属于简单请求的话，浏览器会直接发送请求内容给B，但如果不是简单请求，浏览器会先进行一个<strong>Option</strong>请求，通过Option请求得到域B支持的跨域地址，请求方法和Context类型等，这时浏览器再判断A页面这个非简单请求是否满足B的允许跨域要求，如果满足，浏览器将会进行真正的A页面中嵌入的跨域请求。<br><br>具体什么样的请求是简单请求可以<a href="http://www.ruanyifeng.com/blog/2016/04/cors.html" target="_blank" rel="external">参考阮一峰的blog</a></p>
+<h3 id="后端的跨域支持和带Cookie跨域"><a href="#后端的跨域支持和带Cookie跨域" class="headerlink" title="后端的跨域支持和带Cookie跨域"></a>后端的跨域支持和带Cookie跨域</h3><p>Spring是支持方法级别和全局的跨域设置的，具体可以参考spring官方文档。带Cookie的跨域请求需要服务端配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.allowCredentials(true);</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/29/胡适-赠予今年毕业的大学生-读书笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1450,7 +1581,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1463,7 +1594,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>

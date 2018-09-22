@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="http, url请求" />
+  <meta name="keywords" content="CORS, Spring" />
 
 
 
@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="一个很常见的面试题：url请求的整个过程。但如何答好，然面试官满意还是有一点难度的。我觉得主要是让面试官知道你了解TCP，IP，HTTP协议，dns解析这些基础知识。   域名解析，用户输入url域名后，通过DNS服务把得到访问域名的ip地址。具体：浏览器所在主机向本地DNS服务器发送域名查询报文，本地DNS服务器把请求转发给根服务器（DNS服务器分三种：根服务器，顶级DNS服务器，权威DNS服">
-<meta name="keywords" content="http, url请求">
+<meta name="description" content="第一次接触CORS 最近工作中第一次遇到跨域问题，以前听过但没有认真研究过，这次借助此机会，花了半天时间研究了下，终于理解了这个概念。  CORS英文名Cross Origin Resource Share 跨域资源共享，是一种机制：允许客户端在访问A域名下页面时，A页面中部分的内容会请求B域下服务器得到，此时客户端一直处于A页面。Wikipedia解释：Cross-origin reso">
+<meta name="keywords" content="CORS, Spring">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面试题： url请求整个过程">
-<meta property="og:url" content="http://yoursite.com/2017/09/05/url process/index.html">
+<meta property="og:title" content="第一次接触CORS">
+<meta property="og:url" content="http://yoursite.com/2018/09/22/CORS记录/index.html">
 <meta property="og:site_name" content="Jiangqi&#39;s Blog">
-<meta property="og:description" content="一个很常见的面试题：url请求的整个过程。但如何答好，然面试官满意还是有一点难度的。我觉得主要是让面试官知道你了解TCP，IP，HTTP协议，dns解析这些基础知识。   域名解析，用户输入url域名后，通过DNS服务把得到访问域名的ip地址。具体：浏览器所在主机向本地DNS服务器发送域名查询报文，本地DNS服务器把请求转发给根服务器（DNS服务器分三种：根服务器，顶级DNS服务器，权威DNS服">
+<meta property="og:description" content="第一次接触CORS 最近工作中第一次遇到跨域问题，以前听过但没有认真研究过，这次借助此机会，花了半天时间研究了下，终于理解了这个概念。  CORS英文名Cross Origin Resource Share 跨域资源共享，是一种机制：允许客户端在访问A域名下页面时，A页面中部分的内容会请求B域下服务器得到，此时客户端一直处于A页面。Wikipedia解释：Cross-origin reso">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-05T14:55:37.337Z">
+<meta property="og:updated_time" content="2018-09-22T03:22:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="面试题： url请求整个过程">
-<meta name="twitter:description" content="一个很常见的面试题：url请求的整个过程。但如何答好，然面试官满意还是有一点难度的。我觉得主要是让面试官知道你了解TCP，IP，HTTP协议，dns解析这些基础知识。   域名解析，用户输入url域名后，通过DNS服务把得到访问域名的ip地址。具体：浏览器所在主机向本地DNS服务器发送域名查询报文，本地DNS服务器把请求转发给根服务器（DNS服务器分三种：根服务器，顶级DNS服务器，权威DNS服">
+<meta name="twitter:title" content="第一次接触CORS">
+<meta name="twitter:description" content="第一次接触CORS 最近工作中第一次遇到跨域问题，以前听过但没有认真研究过，这次借助此机会，花了半天时间研究了下，终于理解了这个概念。  CORS英文名Cross Origin Resource Share 跨域资源共享，是一种机制：允许客户端在访问A域名下页面时，A页面中部分的内容会请求B域下服务器得到，此时客户端一直处于A页面。Wikipedia解释：Cross-origin reso">
 
 
 
@@ -132,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/05/url process/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/22/CORS记录/"/>
 
 
 
 
 
-  <title>面试题： url请求整个过程 | Jiangqi's Blog</title>
+  <title>第一次接触CORS | Jiangqi's Blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -268,7 +268,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/05/url process/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/22/CORS记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jiangqi">
@@ -285,7 +285,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">面试题： url请求整个过程</h1>
+          <h1 class="post-title" itemprop="name headline">第一次接触CORS</h1>
         
 
         <div class="post-meta">
@@ -297,8 +297,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-05T22:55:37+08:00">
-                2017-09-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-22T13:26:35+08:00">
+                2018-09-22
               </time>
             
 
@@ -316,9 +316,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/09/05/url process/#comments" itemprop="discussionUrl">
+                <a href="/2018/09/22/CORS记录/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/09/05/url process/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/09/22/CORS记录/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -343,22 +343,15 @@
       
 
       
-        <blockquote>
-<p>一个很常见的面试题：url请求的整个过程。<br>但如何答好，然面试官满意还是有一点难度的。我觉得主要是让面试官知道你了解TCP，IP，HTTP协议，dns解析这些基础知识。</p>
+        <h2 id="第一次接触CORS"><a href="#第一次接触CORS" class="headerlink" title="第一次接触CORS"></a>第一次接触CORS</h2><blockquote>
+<p>最近工作中第一次遇到跨域问题，以前听过但没有认真研究过，这次借助此机会，花了半天时间研究了下，终于理解了这个概念。</p>
 </blockquote>
-<ol>
-<li>域名解析，用户输入url域名后，通过DNS服务把得到访问域名的ip地址。<br>具体：浏览器所在主机向本地DNS服务器发送域名查询报文，本地DNS服务器把请求转发给根服务器（DNS服务器分三种：根服务器，顶级DNS服务器，权威DNS服务器），根服务器通过判断域名后缀com等，返回给本地服务器对应的顶级域名服务器的ip地址，本地服务器发送请求到顶级域名服务器，顶级域名服务器通过判断，返回权威域名服务器ip地址，本地服务器再发送查询请求到权威域名服务器，最后得到请求域名对应的ip地址，本地服务器把ip地址响应报文发送给客户端主机。这里的查询过程是包含递归查询和迭代查询的，客户端主机发送给本地服务器的查询是递归查询，而后面的三个查询是迭代查询。</li>
-<li>封装HTTP请求<br> 浏览器把请求封装为HTTP报文，其中包括：请求的方法GET/PUT，请求路径，请求主机名，客户端的一些信息等。</li>
-<li>建立连接，通过TCP三次握手建立连接。<br>在应用层和传输层之间，更准确地讲是在浏览器进程和操作系统提供的TCP服务程序之间，有一个很重要的东西叫做套接字（Socket）。套接字的作用是实现传输层的多路复用和多路分解。TCP套接字是由一个四元组（源IP地址、源端口号、目的IP地址和目的端口号）来标识的在应用层可以同时运行多个进程，每个进程都需要通过传输层来收发分组，而传输层的TCP进程只有一个，当TCP进程收到一个分组后，该怎么确定应该转发给哪个进程呢？答案是通过套接字，这就是多路分解。同样的道理，多路复用就是进程将分组通过各自的套接字转发给传输层。</li>
-<li>发送请求<br>请求在“三次握手”的第三次“握手”就发送出去了。用户数据存储在TCP报文断的用户数据处，详见TCP报文段格式。</li>
-<li>路由寻址<br>此处请求传送到网络层，网络层最重要的功能是路由选择。通过录用选择，把数据传送到目标ip主机。</li>
-<li>关闭连接<br>目标主机收到了请求后，自底向上地对该请求进行处理。链路层把数据报传给网络层，网路层将TCP数据段通过对应的Socket传给应用程序。应用程序处理请求后产生一个应答的HTTP报文，又经过了一层层的封装、一跳跳的传输到达了源主机。当一次请求传输完成后，目标主机需要通过TCP四次握手关闭连接。<ol>
-<li>客户端浏览器把得到的数据渲染给用户</li>
-</ol>
-</li>
-</ol>
-<hr>
-<p>其中需要重点更细理解的是：路由寻址。如何实现路由寻找？</p>
+<p>CORS英文名Cross Origin Resource Share 跨域资源共享，是一种机制：允许客户端在访问A域名下页面时，A页面中部分的内容会请求B域下服务器得到，此时客户端一直处于A页面。Wikipedia解释：Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served.</p>
+<p>其实这是通过浏览器来保证的，当前访问的A服务的web页面有一个跨域请求到B服务，这时浏览器会进行这个跨域请求，请求时Request Header里面会带有一个字段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Origin:A服务器地址</div></pre></td></tr></table></figure></p>
+<p>如果B服务器允许A服务器跨域请求，会在响应的Response Header里带入字段：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Access-Control-Allow-Origin: A服务器地址(或者*)</div></pre></td></tr></table></figure></p>
+<p>这时浏览器就会把跨域的内容返回给A，但如果不允许，B将返回一个错误请求（具体怎么返回，还没研究），这样A页面将会报跨域错误。</p>
+<h3 id="简单请求问题"><a href="#简单请求问题" class="headerlink" title="简单请求问题"></a>简单请求问题</h3><p>上面说浏览器会请求跨域内容到B，这里会分不同情况，如果A页面跨域的请求属于简单请求的话，浏览器会直接发送请求内容给B，但如果不是简单请求，浏览器会先进行一个<strong>Option</strong>请求，通过Option请求得到域B支持的跨域地址，请求方法和Context类型等，这时浏览器再判断A页面这个非简单请求是否满足B的允许跨域要求，如果满足，浏览器将会进行真正的A页面中嵌入的跨域请求。<br><br>具体什么样的请求是简单请求可以<a href="http://www.ruanyifeng.com/blog/2016/04/cors.html" target="_blank" rel="external">参考阮一峰的blog</a></p>
+<h3 id="后端的跨域支持和带Cookie跨域"><a href="#后端的跨域支持和带Cookie跨域" class="headerlink" title="后端的跨域支持和带Cookie跨域"></a>后端的跨域支持和带Cookie跨域</h3><p>Spring是支持方法级别和全局的跨域设置的，具体可以参考spring官方文档。带Cookie的跨域请求需要服务端配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.allowCredentials(true);</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -388,9 +381,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/网络/" rel="tag"># 网络</a>
+            <a href="/tags/技术/" rel="tag"># 技术</a>
           
-            <a href="/tags/面试/" rel="tag"># 面试</a>
+            <a href="/tags/编程/" rel="tag"># 编程</a>
           
         </div>
       
@@ -403,8 +396,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/01/查理-芒格 在哈佛学校毕业典礼上的演讲-笔记/" rel="next" title="查理-芒格 在哈佛学校毕业典礼上的演讲-笔记">
-                <i class="fa fa-chevron-left"></i> 查理-芒格 在哈佛学校毕业典礼上的演讲-笔记
+              <a href="/2018/05/29/胡适-赠予今年毕业的大学生-读书笔记/" rel="next" title="胡适-赠予今年毕业的大学生-读书笔记">
+                <i class="fa fa-chevron-left"></i> 胡适-赠予今年毕业的大学生-读书笔记
               </a>
             
           </div>
@@ -412,10 +405,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/06/IOCandAOP/" rel="prev" title="IOC和AOP的面试问题">
-                IOC和AOP的面试问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -469,8 +458,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/touxiang.jpg"
@@ -523,6 +521,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一次接触CORS"><span class="nav-number">1.</span> <span class="nav-text">第一次接触CORS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单请求问题"><span class="nav-number">1.1.</span> <span class="nav-text">简单请求问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后端的跨域支持和带Cookie跨域"><span class="nav-number">1.2.</span> <span class="nav-text">后端的跨域支持和带Cookie跨域</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -660,9 +674,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/09/05/url process/';
-          this.page.identifier = '2017/09/05/url process/';
-          this.page.title = '面试题： url请求整个过程';
+          this.page.url = 'http://yoursite.com/2018/09/22/CORS记录/';
+          this.page.identifier = '2018/09/22/CORS记录/';
+          this.page.title = '第一次接触CORS';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://xiaofan.disqus.com/embed.js';
